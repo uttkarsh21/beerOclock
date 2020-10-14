@@ -20,6 +20,7 @@ def waiting():
     subprocess.call('killall -9 pulseaudio', shell=True)
     time.sleep(3)
     subprocess.call('pulseaudio --start', shell=True)
+    subprocess.call('pactl -- set-sink-volume 0 70%', shell=True)
     time.sleep(2)
     status = subprocess.call('ls /dev/input/event0 2>/dev/null', shell=True)  
     while status == 2:
