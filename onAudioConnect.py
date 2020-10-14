@@ -1,6 +1,7 @@
 #!/usr/bin/python
 #
 # Monitor removal of bluetooth reciever
+# set .bashrc to call this script on boot up
 import os
 import sys
 import subprocess
